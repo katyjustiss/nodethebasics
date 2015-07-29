@@ -4,7 +4,7 @@ var http = require('http');
 var path = require('path');
 
 describe('Routes', function() {
-  this.timeout(10000);
+  this.timeout(30000);
   var port = Math.floor(Math.random() * 50000 + 10000); //number between 10000 and 60000
   var url = 'http://localhost:' + port;
   before(function() {
@@ -44,9 +44,12 @@ describe('Routes', function() {
         body += chunk;
       })
       res.on('end', function(data) {
-        expect(body).to.contain('Empire');
+        expect(body).to.contain('Empire'); //potentially copy in the entire thing if you know it.
         done();
       });
     });
   });
+
+  //cal
+
 });
