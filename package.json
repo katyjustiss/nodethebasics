@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha test/unit --recursive",
     "test-integration": "mocha test/integration --recursive",
-    "test-all": "mocha --recursive"
+    "test-all": "mocha --recursive",
+    "start": "node app.js"
   },
   "author": "Katy Justiss <katy.justiss@gmail.com>",
   "license": "MIT",
